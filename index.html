@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios JavaScript - Iniciante</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    
+    <header>
+      <h1>Exercícios JavaScript</h1>
+      <p>Praticando os fundamentos de JavaScript </p>
+    </header>
+
+    <!-- Exercício 1: Verificar se número é positivo, negativo ou zero -->
+    <article class="exercise-card">
+      <span class="exercise-number">1</span>
+        <h2 class="exercise-title">Número Positivo, Negativo ou Zero</h2>
+        <p class="exercise-description">
+            Digite um número e descubra se ele é positivo, negativo ou zero.
+        </p>
+        <section class="input-group">
+            <label for="input1">Digite um número:</label>
+            <input type="number" id="input1" placeholder="Exemplo: 42">
+        </section>
+
+        <button class="button-execute" onclick="exercicio1()">Verificar</button>
+
+        <section class="result-box" id="result1">
+            <h3 class="result-title">Resultado:</h3>
+            <p class="result-content" id="content1"></p>
+        </section>
+    </article>
+
+    <!-- Exercício 2: Verificar maioridade -->
+    <article class="exercise-card">
+      <span class="exercise-number">2</span>
+        <h2 class="exercise-title">Verificar Maioridade</h2>
+        <p class="exercise-description">
+            Informe sua idade e veja se você é maior ou menor de idade.
+        </p>
+        <section class="input-group">
+            <label for="input2">Digite sua idade:</label>
+            <input type="number" id="input2" placeholder="Exemplo: 25">
+        </section>
+
+        <button class="button-execute" onclick="exercicio2()">Verificar</button>
+
+        <section class="result-box" id="result2">
+            <h3 class="result-title">Resultado:</h3>
+            <p class="result-content" id="content2"></p>
+        </section>
+    </article>
+
+    <!-- Exercício 3: Verificar se número é par ou ímpar -->
+    <article class="exercise-card">
+      <span class="exercise-number">3</span>
+        <h2 class="exercise-title">Par ou Ímpar</h2>
+        <p class="exercise-description">
+            Digite um número e descubra se ele é par ou ímpar.
+        </p>
+        <section class="input-group">
+            <label for="input3">Digite um número:</label>
+            <input type="number" id="input3" placeholder="Exemplo: 7">
+        </section>
+
+        <button class="button-execute" onclick="exercicio3()">Verificar</button>
+            
+        <section class="result-box" id="result3">
+            <h3 class="result-title">Resultado:</h3>
+            <p class="result-content" id="content3"></p>
+        </section>
+    </article>
+
+    <!-- Exercício 4: Comparar dois números -->
+    <article class="exercise-card">
+      <span class="exercise-number">4</span>
+        <h2 class="exercise-title">Comparar Dois Números</h2>
+        <p class="exercise-description">
+            Digite dois números e veja qual é o maior.
+        </p>
+        <section class="input-group">
+            <label for="input4a">Primeiro número:</label>
+            <input type="number" id="input4a" placeholder="Exemplo: 10">
+        </section>
+        <section class="input-group">
+            <label for="input4b">Segundo número:</label>
+            <input type="number" id="input4b" placeholder="Exemplo: 20">
+        </section>
+
+        <button class="button-execute" onclick="exercicio4()">Comparar</button>
+
+        <section class="result-box" id="result4">
+            <h3 class="result-title">Resultado:</h3>
+            <p class="result-content" id="content4"></p>
+        </section>
+    </article>
+
+    <!-- Exercício 5: Classificar nota -->
+    <article class="exercise-card">
+      <span class="exercise-number">5</span>
+        <h2 class="exercise-title">Classificação de Nota</h2>
+        <p class="exercise-description">
+            Digite uma nota de 0 a 10 e veja sua classificação: baixa, média ou alta.
+        </p>
+        <section class="input-group">
+            <label for="input5">Digite a nota (0 a 10):</label>
+            <input type="number" id="input5" placeholder="Exemplo: 8.5" step="0.1" min="0" max="10">
+        </section>
+
+        <button class="button-execute" onclick="exercicio5()">Classificar</button>
+            
+        <section class="result-box" id="result5">
+            <h3 class="result-title">Resultado:</h3>
+            <p class="result-content" id="content5"></p>
+        </section>
+    </article>
+
+    <!-- Exercício 6: Calcular IMC -->
+    <article class="exercise-card">
+      <span class="exercise-number">6</span>
+        <h2 class="exercise-title">Calculadora de IMC</h2>
+        <p class="exercise-description">
+            Calcule seu Índice de Massa Corporal. A fórmula é: IMC = peso / (altura × altura)
+        </p>
+        <section class="input-group">
+            <label for="input6a">Peso em quilogramas:</label>
+            <input type="number" id="input6a" placeholder="Exemplo: 70" step="0.1">
+        </section>
+        <section class="input-group">
+            <label for="input6b">Altura em metros:</label>
+            <input type="number" id="input6b" placeholder="Exemplo: 1.75" step="0.01">
+        </section>
+
+        <button class="button-execute" onclick="exercicio6()">Calcular IMC</button>
+
+        <section class="result-box" id="result6">
+            <h3 class="result-title">Resultado:</h3>
+            <p class="result-content" id="content6"></p>
+        </section>
+    </article>
+
+    <!-- Exercício 7: Calculadora simples -->
+    <article class="exercise-card">
+      <span class="exercise-number">7</span>
+        <h2 class="exercise-title">Calculadora Simples</h2>
+        <p class="exercise-description">
+            Escolha dois números e uma operação matemática para realizar o cálculo.
+        </p>
+        <section class="input-group">
+            <label for="input7a">Primeiro número:</label>
+            <input type="number" id="input7a" placeholder="Exemplo: 15">
+        </section>
+        <section class="input-group">
+            <label for="input7op">Escolha a operação:</label>
+            <select id="input7op">
+            <option value="+">Adição (+)</option>
+            <option value="-">Subtração (-)</option>
+            <option value="*">Multiplicação (*)</option>
+            <option value="/">Divisão (/)</option>
+            </select>
+        </section>
+        <section class="input-group">
+            <label for="input7b">Segundo número:</label>
+            <input type="number" id="input7b" placeholder="Exemplo: 5">
+        </section>
+
+        <button class="button-execute" onclick="exercicio7()">Calcular</button>
+
+        <section class="result-box" id="result7">
+            <h3 class="result-title">Resultado:</h3>
+            <p class="result-content" id="content7"></p>
+        </section>
+    </article>
+
+    <!-- Exercício 8: Dia da semana -->
+    <article class="exercise-card">
+      <span class="exercise-number">8</span>
+        <h2 class="exercise-title">Dia da Semana</h2>
+        <p class="exercise-description">
+            Digite um número de 1 a 7 e descubra qual dia da semana corresponde.
+        </p>
+        <section class="input-group">
+            <label for="input8">Digite um número (1 a 7):</label>
+            <input type="number" id="input8" placeholder="Exemplo: 5" min="1" max="7">
+        </section>
+
+        <button class="button-execute" onclick="exercicio8()">Descobrir</button>
+
+        <section class="result-box" id="result8">
+            <h3 class="result-title">Resultado:</h3>
+            <p class="result-content" id="content8"></p>
+        </section>
+    </article>
+
+    <!-- Exercício 9: Verificar múltiplos -->
+    <article class="exercise-card">
+      <span class="exercise-number">9</span>
+        <h2 class="exercise-title">Verificar Múltiplos</h2>
+        <p class="exercise-description">
+            Veja se o primeiro número é múltiplo do segundo número.
+        </p>
+        <section class="input-group">
+            <label for="input9a">Primeiro número:</label>
+            <input type="number" id="input9a" placeholder="Exemplo: 20">
+        </section>
+        <section class="input-group">
+            <label for="input9b">Segundo número:</label>
+            <input type="number" id="input9b" placeholder="Exemplo: 5">
+        </section>
+
+        <button class="button-execute" onclick="exercicio9()">Verificar</button>
+
+        <section class="result-box" id="result9">
+            <h3 class="result-title">Resultado:</h3>
+            <p class="result-content" id="content9"></p>
+        </section>
+    </article>
+
+    <!-- Exercício 10: Sistema de login -->
+    <article class="exercise-card">
+      <span class="exercise-number">10</span>
+        <h2 class="exercise-title">Sistema de Login</h2>
+        <p class="exercise-description">
+            Tente fazer login. Use usuário: <strong>administrador</strong> e senha: <strong>12345</strong>
+        </p>
+        <section class="input-group">
+            <label for="input10a">Usuário:</label>
+            <input type="text" id="input10a" placeholder="Digite o usuário">
+        </section>
+        <section class="input-group">
+            <label for="input10b">Senha:</label>
+            <input type="password" id="input10b" placeholder="Digite a senha">
+        </section>
+
+        <button class="button-execute" onclick="exercicio10()">Fazer Login</button>
+
+        <section class="result-box" id="result10">
+            <h3 class="result-title">Resultado:</h3>
+            <p class="result-content" id="content10"></p>
+        </section>
+    </article>
+
+    <footer>
+      <p>Desenvolvido para praticar JavaScript | Bons estudos!</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
